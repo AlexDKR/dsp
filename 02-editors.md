@@ -60,7 +60,7 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 What terminal editor will you use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> If I have to debug quickly or remotely, I will use vim in the terminal because I've used it in the past. Not opposed to emacs and curious about emacs versus vim.
 
 --
 
@@ -68,6 +68,18 @@ What terminal editor will you use? How did you make your decision?
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> I will use Sublime, since I have used it in the past and it is easy to read, code, and debug in. 
+Hmmmm.... good question:
+    - replacing multiple variables at one time is powerful
+    - column editing can be useful
+    - Regex used with find or replace can come in handy
+
+Not too familiar with keyboard shortcuts in sublime - just the ones used in word come in handy like:
+    - cut, copy, paste
+    - command + left, right, up, down
+    - highlighting + option to highlight words, or entire lines
+
+Not too much customization. From what I can remember, the nice thing is that it can be used pretty much right out of the box and right away. It looks beautiful as well in terms of sifting through comments, decision structures, and other blocks of code.
+    - replacing tabs with spaces and possibly 2 spaces instead of 4 can come in handy if nesting a lot
 
  
