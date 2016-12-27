@@ -48,13 +48,13 @@ cross-platform.
 
 Did you install Python 2 or 3? Why?  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Installed Python 2, since I have familiarity with it, the class uses it, and as a result will be easier to keep using.
 
 ###Q2. Which Python Version Installed   
 
 How can you check the version of Python installed if you happen to be on an unfamiliar computer?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Type python in the terminal and read the version number that comes up.
 
  
 
