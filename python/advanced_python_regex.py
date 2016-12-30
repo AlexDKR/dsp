@@ -68,7 +68,7 @@ for degree in unique_degree_list:
         last_degree = degree
 
 # Q1.1 how many different degrees
-print 'Q1: The following is a list of the %s unique degrees:' % (len(final_degree_list))
+print 'Q1: The following is a list of the %s unique degrees and how many there are within the faculty:' % (len(final_degree_list))
 # for degree in final_degree_list:
 #     print degree
 
@@ -91,7 +91,7 @@ print
 # Q2.1 how many different titles are there
 faculty_df[' title'] = faculty_df[' title'].apply(find_title)
 unique_occupation_list = faculty_df[' title'].unique()
-print 'Q2: There are %s different titles. A summary of faculty titles is below:' % len(unique_occupation_list)
+print 'Q2: There are %s different titles. A summary of faculty titles is below including how many of each there are in the faculty:' % len(unique_occupation_list)
 
 
 
@@ -111,7 +111,7 @@ print
 # Q3 take e-mail addresses and put them in a list
 email_list = faculty_df[' email'].tolist()
 
-print 'Q3: email_list:'
+print 'Q3: The elements of email_list are printed below for ease of readability:'
 for email in email_list:
     print email
 print
