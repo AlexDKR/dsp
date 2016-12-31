@@ -14,7 +14,7 @@ faculty_df[' professor name'] = faculty_df['name'].apply(lambda name: (name.spli
 faculty_df[' dict_values'] = faculty_df.apply(lambda df: [df[' degree'] , df[' title'], df[' email']], axis = 1)
 
 # sort by first name
-faculty_df = faculty_df.sort(columns = 'name')
+faculty_df = faculty_df.sort_values(by = 'name')
 
 # print faculty_df
 
@@ -71,7 +71,7 @@ print
 
 # Q8. print out dictionary key value pairs in order of last names
 # sort by last name
-faculty_l_df = faculty_df.sort(columns = ' last name')
+faculty_l_df = faculty_df.sort_values(by = ' last name')
 
 # create groups by professor name
 faculty_professor_l_group = faculty_l_df.groupby(' professor name')
