@@ -121,7 +121,7 @@ faculty_dict = { 'Ellenberg': [['Ph.D.', 'Professor', 'sellenbe@upenn.edu'], ['P
 ```
 Print the first 3 key and value pairs of the dictionary:
 
->> Q6. key-value pairs based on last name
+>> Q6. key-value pairs based on last name  
 >> Localio: [[' JD MA MPH MS PhD', 'Associate Professor of Biostatistics', 'rlocalio@upenn.edu']]  
 >> Stephens: [[' Ph.D.', 'Assistant Professor of Biostatistics', 'alisaste@mail.med.upenn.edu']]  
 >> Troxel: [[' ScD', 'Professor of Biostatistics', 'atroxel@mail.med.upenn.edu']]  
