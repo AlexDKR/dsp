@@ -19,7 +19,7 @@ This data is available in this file:  [faculty.csv](python/faculty.csv)
 
 ####Q1. Find how many different degrees there are, and their frequencies: Ex:  PhD, ScD, MD, MPH, BSEd, MS, JD, etc.
 
->> Q1: The following is a list of the 9 unique degrees and how many there are within the faculty:
+>> '''Q1: The following is a list of the 9 unique degrees and how many there are within the faculty:
 >>                   MD: 1
 >>                   MA: 1
 >>                  ScD: 6
@@ -28,7 +28,7 @@ This data is available in this file:  [faculty.csv](python/faculty.csv)
 >>                 BSEd: 1
 >>                   MS: 2
 >>                   JD: 1
->>            No_degree: 1
+>>            No_degree: 1'''
 
 
 
@@ -121,7 +121,7 @@ faculty_dict = { 'Ellenberg': [['Ph.D.', 'Professor', 'sellenbe@upenn.edu'], ['P
 ```
 Print the first 3 key and value pairs of the dictionary:
 
->> Q6. key-value pairs based on last name  
+>> Q6. key-value pairs based on last name
 >> Localio: [[' JD MA MPH MS PhD', 'Associate Professor of Biostatistics', 'rlocalio@upenn.edu']]  
 >> Stephens: [[' Ph.D.', 'Assistant Professor of Biostatistics', 'alisaste@mail.med.upenn.edu']]  
 >> Troxel: [[' ScD', 'Professor of Biostatistics', 'atroxel@mail.med.upenn.edu']]  
