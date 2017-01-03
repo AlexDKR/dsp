@@ -135,16 +135,18 @@ professor_dict = {('Susan', 'Ellenberg'): ['Ph.D.', 'Professor', 'sellenbe@upenn
 Print the first 3 key and value pairs of the dictionary:
 
 >> Q7. key-value pairs based on professor tuple   
->> ('A.', 'Localio'): [[' JD MA MPH MS PhD', 'Associate Professor of Biostatistics', 'rlocalio@upenn.edu']]    
->> ('Alisa', 'Stephens'): [[' Ph.D.', 'Assistant Professor of Biostatistics', 'alisaste@mail.med.upenn.edu']]    
+>> ('A.', 'Localio'): [[' JD MA MPH MS PhD', 'Associate Professor of Biostatistics', 'rlocalio@upenn.edu']]  
+
+>> ('Alisa', 'Stephens'): [[' Ph.D.', 'Assistant Professor of Biostatistics', 'alisaste@mail.med.upenn.edu']]   
+
 >> ('Andrea', 'Troxel'): [[' ScD', 'Professor of Biostatistics', 'atroxel@mail.med.upenn.edu']]    
 
 
 ####Q8.  It looks like the current dictionary is printing by first name.  Print out the dictionary key value pairs based on alphabetical orders of the last name of the professors
 
 >> Q8. key-value pairs based on professor tuple, last name   
->> ('Scarlett', 'Bellamy'): [[' Sc.D.', 'Associate Professor of Biostatistics', 'bellamys@mail.med.upenn.edu']]    
->>  ('Warren', 'Bilker'): [['Ph.D.', 'Professor of Biostatistics', 'warren@upenn.edu']]    
+>> ('Scarlett', 'Bellamy'): [[' Sc.D.', 'Associate Professor of Biostatistics', 'bellamys@mail.med.upenn.edu']]  
+>>  ('Warren', 'Bilker'): [['Ph.D.', 'Professor of Biostatistics', 'warren@upenn.edu']]  
 >>  ('Matthew', 'Bryan'): [[' PhD', 'Assistant Professor of Biostatistics', 'bryanma@upenn.edu']]    
 
 Place your code in this file: [advanced_python_dict.py](python/advanced_python_dict.py)
