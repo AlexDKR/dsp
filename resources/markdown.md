@@ -173,7 +173,9 @@ What is the most installed language in the world?
 - Spark
 - Javascript
 
->>REPLACE THIS TEXT WITH YOUR RESPONSE
+>> I would bet on Javascript based on what has been stated on stack overlflow and github
+>> http://stackoverflow.com/research/developer-survey-2016
+>> https://octoverse.github.com/
 
 -
 
@@ -186,7 +188,7 @@ What is the distribution of t-squared?
  * Beta
  * Bivariate Normal
 
->>REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Chi-squared
 
 ***
 
@@ -197,7 +199,7 @@ In the scikit-learn's official source repo, about how many issues are outstandin
 3. 700  
 4. 7000  
 
->>REPLACE THIS TEXT WITH YOUR RESPONSE
+>> It says about 3. 700, currently 708 issues
 
 ---
 
