@@ -87,7 +87,8 @@ print 'set element removal time : %5.1fus.' % (set_removal_time * 10**6)
 print
 ```
 >> The following shows the results of the previous block of code:
->>  
+>>    
+
 > Given: The list and sets are identical and are ~1000 elements.
 >        There are about 10 of the known element in each.
 > 
@@ -129,7 +130,8 @@ print last_name_list[:4]
 print
 ```
 >> The output of the code given above is shown below:
->>  
+>>    
+
 > Last Name List:
 > ['Ellenberg', 'Li', 'Xiao', 'Shults']
 > 
@@ -219,6 +221,7 @@ for key, value in faculty_first_name_dict.iteritems():
 
 >> Output of the above is shown below:  
 >> 
+
 > original name_list:
 > [('A.', 'Localio'), ('Alisa', 'Stephens'), ('Andrea', 'Troxel'), ('Benjamin', 'French'), ('Dawei', 'Xie'), ('Haochang', 'Shou'), ('Hongzhe', 'Li'), ('J.', 'Landis'), ('Jason', 'Roy'), ('Jinbo', 'Chen'), ('Jonas', 'Ellenberg'), ('Justine', 'Shults'), ('Kathleen', 'Propert'), ('Knashawn', 'Morales'), ('Marshall', 'Joffe'), ('Mary', 'Putt'), ('Mary', 'Sammel'), ('Matthew', 'Bryan'), ('Michelle', 'Ross'), ('Mingyao', 'Li'), ('Nandita', 'Mitra'), ('Pamela', 'Shaw'), ('Phyllis', 'Gimotty'), ('Rebecca', 'Hubbard'), ('Rui', 'Feng'), ('Rui', 'Xiao'), ('Russell', 'Shinohara'), ('Sarah', 'Ratcliffe'), ('Scarlett', 'Bellamy'), ('Sharon', 'Xie'), ('Susan', 'Ellenberg'), ('Warren', 'Bilker'), ('Wei', 'Yang'), ('Wei-Ting', 'Hwang'), ('Wensheng', 'Guo'), ('Yenchih', 'Hsu'), ('Yimei', 'Li')]  
 
