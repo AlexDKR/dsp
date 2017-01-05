@@ -130,7 +130,13 @@ print
 ```
 >> The output of the code given above is shown below:
 >>  
+> Last Name List:
+> ['Ellenberg', 'Li', 'Xiao', 'Shults']
 > 
+> Sorted Last Name List:
+> ['Bryan', 'Bellamy', 'Bilker', 'Chen']  
+
+
 
 ---
 
@@ -138,18 +144,175 @@ print
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
->> list comprehensions are a way to manipulate a list in a single line, as opposed to creating multiple lines.
+>> List comprehensions are a way to manipulate a list in a single line, as opposed to coding a loop with multiple lines.  
+>>  
+>> The code below takes the keys of the faculty dictionary we've been using, and creates a name list.  
+>> A list comprehension and map are used to create a list of first names only. The map command allows less typing and achieves the same result.  
+>> The filter command is used to qualify and items in a list, which is beyond the capability of map.  
+>>  
+>> Set comprehensions and dictionary comprehensions are thrown in as well.  
+
+```python
+# Q4 list, set, and dictionary comprehensions
+#    map and filter
+
+# pull in the faculty dictionary from the advanced file
+faculty_dict = {('Yimei', 'Li'): [' Ph.D.', 'Assistant Professor of Biostatistics', 'liy3@email.chop.edu'], ('Hongzhe', 'Li'): [' Ph.D', 'Professor of Biostatistics', 'hongzhe@upenn.edu'], ('Justine', 'Shults'): [' Ph.D.', 'Professor of Biostatistics', 'jshults@mail.med.upenn.edu'], ('Wei', 'Yang'): [' Ph.D.', 'Assistant Professor of Biostatistics', 'weiyang@mail.med.upenn.edu'], ('Matthew', 'Bryan'): [' PhD', 'Assistant Professor of Biostatistics', 'bryanma@upenn.edu'], ('Kathleen', 'Propert'): [' Sc.D.', 'Professor of Biostatistics', 'propert@mail.med.upenn.edu'], ('Wensheng', 'Guo'): [' Ph.D', 'Professor of Biostatistics', 'wguo@mail.med.upenn.edu'], ('Phyllis', 'Gimotty'): [' Ph.D', 'Professor of Biostatistics', 'pgimotty@upenn.edu'], ('Jonas', 'Ellenberg'): [' Ph.D.', 'Professor of Biostatistics', 'jellenbe@mail.med.upenn.edu'], ('Wei-Ting', 'Hwang'): [' Ph.D.', 'Associate Professor of Biostatistics', 'whwang@mail.med.upenn.edu'], ('Michelle', 'Ross'): [' PhD', 'Assistant Professor is Biostatistics', 'michross@upenn.edu'], ('Jinbo', 'Chen'): [' Ph.D.', 'Associate Professor of Biostatistics', 'jinboche@upenn.edu'], ('Sharon', 'Xie'): [' Ph.D.', 'Associate Professor of Biostatistics', 'sxie@mail.med.upenn.edu'], ('Jason', 'Roy'): [' Ph.D.', 'Associate Professor of Biostatistics', 'jaroy@mail.med.upenn.edu'], ('Mingyao', 'Li'): [' Ph.D.', 'Associate Professor of Biostatistics', 'mingyao@mail.med.upenn.edu'], ('Yenchih', 'Hsu'): [' Ph.D.', 'Assistant Professor of Biostatistics', 'hsu9@mail.med.upenn.edu'], ('Mary', 'Sammel'): [' Sc.D.', 'Professor of Biostatistics', 'msammel@cceb.med.upenn.edu'], ('Warren', 'Bilker'): ['Ph.D.', 'Professor of Biostatistics', 'warren@upenn.edu'], ('A.', 'Localio'): [' JD MA MPH MS PhD', 'Associate Professor of Biostatistics', 'rlocalio@upenn.edu'], ('Haochang', 'Shou'): [' Ph.D.', 'Assistant Professor of Biostatistics', 'hshou@mail.med.upenn.edu'], ('Rui', 'Xiao'): [' PhD', 'Assistant Professor of Biostatistics', 'rxiao@mail.med.upenn.edu'], ('Benjamin', 'French'): [' PhD', 'Associate Professor of Biostatistics', 'bcfrench@mail.med.upenn.edu'], ('Sarah', 'Ratcliffe'): [' Ph.D.', 'Associate Professor of Biostatistics', 'sratclif@upenn.edu'], ('Rui', 'Feng'): [' Ph.D', 'Assistant Professor of Biostatistics', 'ruifeng@upenn.edu'], ('Dawei', 'Xie'): [' PhD', 'Assistant Professor of Biostatistics', 'dxie@upenn.edu'], ('Pamela', 'Shaw'): [' PhD', 'Assistant Professor of Biostatistics', 'shawp@upenn.edu'], ('Nandita', 'Mitra'): [' Ph.D.', 'Associate Professor of Biostatistics', 'nanditam@mail.med.upenn.edu'], ('Scarlett', 'Bellamy'): [' Sc.D.', 'Associate Professor of Biostatistics', 'bellamys@mail.med.upenn.edu'], ('Marshall', 'Joffe'): [' MD MPH Ph.D', 'Professor of Biostatistics', 'mjoffe@mail.med.upenn.edu'], ('Susan', 'Ellenberg'): [' Ph.D.', 'Professor of Biostatistics', 'sellenbe@upenn.edu'], ('Knashawn', 'Morales'): [' Sc.D.', 'Associate Professor of Biostatistics', 'knashawn@mail.med.upenn.edu'], ('Alisa', 'Stephens'): [' Ph.D.', 'Assistant Professor of Biostatistics', 'alisaste@mail.med.upenn.edu'], ('Rebecca', 'Hubbard'): [' PhD', 'Associate Professor of Biostatistics', 'rhubb@mail.med.upenn.edu'], ('Mary', 'Putt'): [' PhD ScD', 'Professor of Biostatistics', 'mputt@mail.med.upenn.edu'], ('Andrea', 'Troxel'): [' ScD', 'Professor of Biostatistics', 'atroxel@mail.med.upenn.edu'], ('Russell', 'Shinohara'): ['0', 'Assistant Professor of Biostatistics', 'rshi@mail.med.upenn.edu'], ('J.', 'Landis'): [' B.S.Ed. M.S. Ph.D.', 'Professor of Biostatistics', 'jrlandis@mail.med.upenn.edu']}
+
+name_list = sorted(faculty_dict.keys())
+# list comprehension example:
+# get the last names only from last_name_list
+print 'original name_list:'
+print name_list
+print
+
+# list comprehension of name_list
+first_name_list = [name[0] for name in name_list]
+print 'first-name results of list comprehension of name_list'
+print first_name_list
+print
+
+
+
+# map example 
+# creating a new list based on map
+mapped_first_name_list = map(lambda name: name[0], name_list)
+print 'first-name results using map and name_list'
+print mapped_first_name_list
+print
+
+
+
+# filter example
+# filtering out the first names that begin with s
+print 'first name list that begins with s using filter and name_list'
+first_name_s_list = filter(lambda name: name[0].lower()[0] == 's', name_list)
+print first_name_s_list
+print
+print
+print
+
+
+
+# set comprehension
+name_set = set(name_list)
+first_name_set = {name[0] for name in name_set}
+print 'first name set using a set comprehension'
+print first_name_set
+print
+print
+print
+
+
+
+# dictionary comprehension
+faculty_first_name_dict = {name[0]: credentials for name, credentials in faculty_dict.items()}
+
+print 'original dictionary:'
+for key, value in faculty_dict.iteritems():
+    print '%26s: %s' % (key, value)
+print
+print 'dictionary comprehension used to provide first name as key'
+for key, value in faculty_first_name_dict.iteritems():
+    print '%10s: %s' % (key, value)
+```
+
+>> Output of the above is shown below:  
 >> 
->> examples with list comprehension
->> 
->> example with map
->> 
->> example with filter
->> 
->> demonstrate set comprehensions
->> 
->> demonstrate dicitonary comprehensions
+> original name_list:
+> [('A.', 'Localio'), ('Alisa', 'Stephens'), ('Andrea', 'Troxel'), ('Benjamin', 'French'), ('Dawei', 'Xie'), ('Haochang', 'Shou'), ('Hongzhe', 'Li'), ('J.', 'Landis'), ('Jason', 'Roy'), ('Jinbo', 'Chen'), ('Jonas', 'Ellenberg'), ('Justine', 'Shults'), ('Kathleen', 'Propert'), ('Knashawn', 'Morales'), ('Marshall', 'Joffe'), ('Mary', 'Putt'), ('Mary', 'Sammel'), ('Matthew', 'Bryan'), ('Michelle', 'Ross'), ('Mingyao', 'Li'), ('Nandita', 'Mitra'), ('Pamela', 'Shaw'), ('Phyllis', 'Gimotty'), ('Rebecca', 'Hubbard'), ('Rui', 'Feng'), ('Rui', 'Xiao'), ('Russell', 'Shinohara'), ('Sarah', 'Ratcliffe'), ('Scarlett', 'Bellamy'), ('Sharon', 'Xie'), ('Susan', 'Ellenberg'), ('Warren', 'Bilker'), ('Wei', 'Yang'), ('Wei-Ting', 'Hwang'), ('Wensheng', 'Guo'), ('Yenchih', 'Hsu'), ('Yimei', 'Li')]  
+
+> first-name results of list comprehension of name_list  
+> ['A.', 'Alisa', 'Andrea', 'Benjamin', 'Dawei', 'Haochang', 'Hongzhe', 'J.', 'Jason', 'Jinbo', 'Jonas', 'Justine', 'Kathleen', 'Knashawn', 'Marshall', 'Mary', 'Mary', 'Matthew', 'Michelle', 'Mingyao', 'Nandita', 'Pamela', 'Phyllis', 'Rebecca', 'Rui', 'Rui', 'Russell', 'Sarah', 'Scarlett', 'Sharon', 'Susan', 'Warren', 'Wei', 'Wei-Ting', 'Wensheng', 'Yenchih', 'Yimei']  
+>     
+> first-name results using map and name_list  
+> ['A.', 'Alisa', 'Andrea', 'Benjamin', 'Dawei', 'Haochang', 'Hongzhe', 'J.', 'Jason', 'Jinbo', 'Jonas', 'Justine', 'Kathleen', 'Knashawn', 'Marshall', 'Mary', 'Mary', 'Matthew', 'Michelle', 'Mingyao', 'Nandita', 'Pamela', 'Phyllis', 'Rebecca', 'Rui', 'Rui', 'Russell', 'Sarah', 'Scarlett', 'Sharon', 'Susan', 'Warren', 'Wei', 'Wei-Ting', 'Wensheng', 'Yenchih', 'Yimei']  
+>   
+> first name list that begins with s using filter and name_list  
+> [('Sarah', 'Ratcliffe'), ('Scarlett', 'Bellamy'), ('Sharon', 'Xie'), ('Susan', 'Ellenberg')]  
+>   
+>   
+>   
+> first name set using a set comprehension  
+> set(['Sarah', 'Sharon', 'Russell', 'Kathleen', 'Wei', 'Matthew', 'Hongzhe', 'Pamela', 'Mary', 'Scarlett', 'Benjamin', 'Jinbo', 'Wensheng', 'A.', 'Mingyao', 'Jonas', 'Alisa', 'Phyllis', 'Andrea', 'Rebecca', 'Nandita', 'Michelle', 'Wei-Ting', 'Susan', 'Rui', 'Yenchih', 'Yimei', 'Jason', 'Knashawn', 'Marshall', 'Justine', 'Haochang', 'J.', 'Dawei', 'Warren'])  
+>    
+>   
+>   
+> original dictionary:  
+>     ('Susan', 'Ellenberg'): [' Ph.D.', 'Professor of Biostatistics', 'sellenbe@upenn.edu']  
+>            ('Yimei', 'Li'): [' Ph.D.', 'Assistant Professor of Biostatistics', 'liy3@email.chop.edu']  
+>            ('Rui', 'Xiao'): [' PhD', 'Assistant Professor of Biostatistics', 'rxiao@mail.med.upenn.edu']  
+>          ('Hongzhe', 'Li'): [' Ph.D', 'Professor of Biostatistics', 'hongzhe@upenn.edu']  
+>      ('Justine', 'Shults'): [' Ph.D.', 'Professor of Biostatistics', 'jshults@mail.med.upenn.edu']  
+>     ('Sarah', 'Ratcliffe'): [' Ph.D.', 'Associate Professor of Biostatistics', 'sratclif@upenn.edu']  
+>            ('Wei', 'Yang'): [' Ph.D.', 'Assistant Professor of Biostatistics', 'weiyang@mail.med.upenn.edu']  
+>       ('Matthew', 'Bryan'): [' PhD', 'Assistant Professor of Biostatistics', 'bryanma@upenn.edu']  
+>     ('Benjamin', 'French'): [' PhD', 'Associate Professor of Biostatistics', 'bcfrench@mail.med.upenn.edu']  
+>           ('Dawei', 'Xie'): [' PhD', 'Assistant Professor of Biostatistics', 'dxie@upenn.edu']  
+>    ('Kathleen', 'Propert'): [' Sc.D.', 'Professor of Biostatistics', 'propert@mail.med.upenn.edu']  
+>        ('Wensheng', 'Guo'): [' Ph.D', 'Professor of Biostatistics', 'wguo@mail.med.upenn.edu']  
+>     ('Phyllis', 'Gimotty'): [' Ph.D', 'Professor of Biostatistics', 'pgimotty@upenn.edu']  
+>         ('Pamela', 'Shaw'): [' PhD', 'Assistant Professor of Biostatistics', 'shawp@upenn.edu']  
+>     ('Jonas', 'Ellenberg'): [' Ph.D.', 'Professor of Biostatistics', 'jellenbe@mail.med.upenn.edu']  
+>    ('Scarlett', 'Bellamy'): [' Sc.D.', 'Associate Professor of Biostatistics', 'bellamys@mail.med.upenn.edu']  
+>       ('Michelle', 'Ross'): [' PhD', 'Assistant Professor is Biostatistics', 'michross@upenn.edu']  
+>          ('Jinbo', 'Chen'): [' Ph.D.', 'Associate Professor of Biostatistics', 'jinboche@upenn.edu']  
+>            ('Rui', 'Feng'): [' Ph.D', 'Assistant Professor of Biostatistics', 'ruifeng@upenn.edu']  
+>      ('Marshall', 'Joffe'): [' MD MPH Ph.D', 'Professor of Biostatistics', 'mjoffe@mail.med.upenn.edu']  
+>      ('Wei-Ting', 'Hwang'): [' Ph.D.', 'Associate Professor of Biostatistics', 'whwang@mail.med.upenn.edu']  
+>          ('Mingyao', 'Li'): [' Ph.D.', 'Associate Professor of Biostatistics', 'mingyao@mail.med.upenn.edu']  
+>           ('Jason', 'Roy'): [' Ph.D.', 'Associate Professor of Biostatistics', 'jaroy@mail.med.upenn.edu']  
+>      ('Alisa', 'Stephens'): [' Ph.D.', 'Assistant Professor of Biostatistics', 'alisaste@mail.med.upenn.edu']  
+>     ('Rebecca', 'Hubbard'): [' PhD', 'Associate Professor of Biostatistics', 'rhubb@mail.med.upenn.edu']  
+>    ('Knashawn', 'Morales'): [' Sc.D.', 'Associate Professor of Biostatistics', 'knashawn@mail.med.upenn.edu']  
+>          ('Sharon', 'Xie'): [' Ph.D.', 'Associate Professor of Biostatistics', 'sxie@mail.med.upenn.edu']  
+>       ('Andrea', 'Troxel'): [' ScD', 'Professor of Biostatistics', 'atroxel@mail.med.upenn.edu']  
+>         ('Yenchih', 'Hsu'): [' Ph.D.', 'Assistant Professor of Biostatistics', 'hsu9@mail.med.upenn.edu']  
+>           ('J.', 'Landis'): [' B.S.Ed. M.S. Ph.D.', 'Professor of Biostatistics', 'jrlandis@mail.med.upenn.edu']  
+>   ('Russell', 'Shinohara'): ['0', 'Assistant Professor of Biostatistics', 'rshi@mail.med.upenn.edu']  
+>         ('Mary', 'Sammel'): [' Sc.D.', 'Professor of Biostatistics', 'msammel@cceb.med.upenn.edu']  
+>       ('Warren', 'Bilker'): ['Ph.D.', 'Professor of Biostatistics', 'warren@upenn.edu']  
+>          ('A.', 'Localio'): [' JD MA MPH MS PhD', 'Associate Professor of Biostatistics', 'rlocalio@upenn.edu']  
+>       ('Haochang', 'Shou'): [' Ph.D.', 'Assistant Professor of Biostatistics', 'hshou@mail.med.upenn.edu']  
+>       ('Nandita', 'Mitra'): [' Ph.D.', 'Associate Professor of Biostatistics', 'nanditam@mail.med.upenn.edu']  
+>           ('Mary', 'Putt'): [' PhD ScD', 'Professor of Biostatistics', 'mputt@mail.med.upenn.edu']  
+>   
+> dictionary comprehension used to provide first name as key  
+>      Sarah: [' Ph.D.', 'Associate Professor of Biostatistics', 'sratclif@upenn.edu']  
+>     Sharon: [' Ph.D.', 'Associate Professor of Biostatistics', 'sxie@mail.med.upenn.edu']  
+>    Russell: ['0', 'Assistant Professor of Biostatistics', 'rshi@mail.med.upenn.edu']  
+>   Kathleen: [' Sc.D.', 'Professor of Biostatistics', 'propert@mail.med.upenn.edu']  
+>        Wei: [' Ph.D.', 'Assistant Professor of Biostatistics', 'weiyang@mail.med.upenn.edu']  
+>   Haochang: [' Ph.D.', 'Assistant Professor of Biostatistics', 'hshou@mail.med.upenn.edu']  
+>    Matthew: [' PhD', 'Assistant Professor of Biostatistics', 'bryanma@upenn.edu']  
+>    Hongzhe: [' Ph.D', 'Professor of Biostatistics', 'hongzhe@upenn.edu']  
+>     Pamela: [' PhD', 'Assistant Professor of Biostatistics', 'shawp@upenn.edu']  
+>       Mary: [' PhD ScD', 'Professor of Biostatistics', 'mputt@mail.med.upenn.edu']  
+>   Scarlett: [' Sc.D.', 'Associate Professor of Biostatistics', 'bellamys@mail.med.upenn.edu']  
+>   Benjamin: [' PhD', 'Associate Professor of Biostatistics', 'bcfrench@mail.med.upenn.edu']  
+>        Rui: [' Ph.D', 'Assistant Professor of Biostatistics', 'ruifeng@upenn.edu']  
+>         A.: [' JD MA MPH MS PhD', 'Associate Professor of Biostatistics', 'rlocalio@upenn.edu']  
+>    Mingyao: [' Ph.D.', 'Associate Professor of Biostatistics', 'mingyao@mail.med.upenn.edu']  
+>      Jonas: [' Ph.D.', 'Professor of Biostatistics', 'jellenbe@mail.med.upenn.edu']  
+>      Alisa: [' Ph.D.', 'Assistant Professor of Biostatistics', 'alisaste@mail.med.upenn.edu']  
+>    Phyllis: [' Ph.D', 'Professor of Biostatistics', 'pgimotty@upenn.edu']  
+>     Andrea: [' ScD', 'Professor of Biostatistics', 'atroxel@mail.med.upenn.edu']  
+>    Rebecca: [' PhD', 'Associate Professor of Biostatistics', 'rhubb@mail.med.upenn.edu']  
+>    Nandita: [' Ph.D.', 'Associate Professor of Biostatistics', 'nanditam@mail.med.upenn.edu']  
+>   Michelle: [' PhD', 'Assistant Professor is Biostatistics', 'michross@upenn.edu']  
+>   Wei-Ting: [' Ph.D.', 'Associate Professor of Biostatistics', 'whwang@mail.med.upenn.edu']  
+>      Susan: [' Ph.D.', 'Professor of Biostatistics', 'sellenbe@upenn.edu']  
+>      Jinbo: [' Ph.D.', 'Associate Professor of Biostatistics', 'jinboche@upenn.edu']  
+>    Yenchih: [' Ph.D.', 'Assistant Professor of Biostatistics', 'hsu9@mail.med.upenn.edu']  
+>      Yimei: [' Ph.D.', 'Assistant Professor of Biostatistics', 'liy3@email.chop.edu']  
+>      Jason: [' Ph.D.', 'Associate Professor of Biostatistics', 'jaroy@mail.med.upenn.edu']  
+>   Knashawn: [' Sc.D.', 'Associate Professor of Biostatistics', 'knashawn@mail.med.upenn.edu']  
+>   Marshall: [' MD MPH Ph.D', 'Professor of Biostatistics', 'mjoffe@mail.med.upenn.edu']  
+>    Justine: [' Ph.D.', 'Professor of Biostatistics', 'jshults@mail.med.upenn.edu']  
+>   Wensheng: [' Ph.D', 'Professor of Biostatistics', 'wguo@mail.med.upenn.edu']  
+>         J.: [' B.S.Ed. M.S. Ph.D.', 'Professor of Biostatistics', 'jrlandis@mail.med.upenn.edu']  
+>      Dawei: [' PhD', 'Assistant Professor of Biostatistics', 'dxie@upenn.edu']  
+>     Warren: ['Ph.D.', 'Professor of Biostatistics', 'warren@upenn.edu']  
 
 ---
 
