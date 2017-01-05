@@ -1,0 +1,1 @@
+remember to git clone https://github.com/AllenDowney/ThinkStats2.git
