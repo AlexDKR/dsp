@@ -16,7 +16,10 @@ Now compute the biased distribution we would see if we surveyed the children and
 
 Plot the actual and biased distributions, and compute their means. As a starting place, you can use chap03ex.ipynb.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+![Number of Children Reported](img/3-1_probability_mass_function.png)
+
+>> Mean number of children per mother, actually reported by mothers   : 1.0 children.  
+>> Computated mean number of children per mother, reported by children: 2.4 children.  
 
 
 
