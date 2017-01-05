@@ -86,6 +86,11 @@ for prof_name, info in faculty_professor_l_dict.iteritems():
     print '%s: %s' % (prof_name, faculty_professor_l_dict[prof_name])
 print
 
+# for use with 5apython
+# print 'dropping'
+# faculty_l_df = faculty_l_df.drop((col for col in [' last name', 'name', ' dict_values']), axis=1)
+# faculty_l_dict = faculty_l_df.set_index(' professor name').T.to_dict('list')
+# print faculty_l_dict
 
 
 
