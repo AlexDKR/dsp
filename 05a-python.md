@@ -42,7 +42,7 @@ How are Python lists and sets similar and different? Give examples of using both
 >> 
 >> see q2_lists_sets.py in python
 
-'''python
+```python
 import numpy as np
 import time
 
@@ -85,7 +85,7 @@ print
 print 'list element removal time: %5.1fus.' % (list_removal_time * 10**6)
 print 'set element removal time : %5.1fus.' % (set_removal_time * 10**6)
 print
-'''
+```
 
 ---
 
