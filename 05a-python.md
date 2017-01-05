@@ -40,7 +40,7 @@ How are Python lists and sets similar and different? Give examples of using both
 >> Lists are based on dynamic arrays and sets are based on hash tables.
 >> Hash tables outperform dyanamic arrays when looking for an element when there are lots of elements
 >> 
->> see q2_lists_sets.py in python
+>> The following block of code shows an example of when removing elements from a set can be faster than removing elements from a list.
 
 ```python
 import numpy as np
@@ -86,6 +86,13 @@ print 'list element removal time: %5.1fus.' % (list_removal_time * 10**6)
 print 'set element removal time : %5.1fus.' % (set_removal_time * 10**6)
 print
 ```
+>> The following shows the results of the previous block of code:
+>>  
+> Given: The list and sets are identical and are ~1000 elements.
+>        There are about 10 of the known element in each.
+> 
+> list element removal time: 182.2us.
+> set element removal time :   1.0us.
 
 ---
 
@@ -96,7 +103,8 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 >> Python's 'lambda' is an operator used to create assignments that behave like functions.
 >> 
 >> It is used for one-time use, terse functions and complete expressions without creating multiple lines in a method, further away from the executed statement.
->> 
+>>  
+>> The code block below creates a list of keys from a dictionary. The sorted function is used to sort the list of names by the last name. This is achieved by the 'key' argument and with a lambda function.
 
 ```python
 # Q3 Lambda functions
@@ -120,8 +128,9 @@ print 'Sorted Last Name List:'
 print last_name_list[:4]
 print
 ```
->> sorted example
->> sorted(key = x: lambda x(?))
+>> The output of the code given above is shown below:
+>>  
+> 
 
 ---
 
